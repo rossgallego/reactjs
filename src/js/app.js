@@ -1,7 +1,6 @@
-
- require('bootstrap-loader');
+require('bootstrap-loader');
 require("../style/main.scss");
 
-$("h1").click(function(){
-	
-})
+import React from 'react';
+import ReactDOM from 'react-dom';
+

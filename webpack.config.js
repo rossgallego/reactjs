@@ -5,7 +5,8 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: "./src/js/app.js",
+	// entry: "./src/js/app.js",
+	entry: "./src/js/jsx/index.jsx",
 	output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
@@ -29,7 +30,8 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				loader: 'babel-loader',
-				query: {
+				query: 
+				{
 					presets: ['es2015']
 				}
 			},
@@ -44,6 +46,15 @@ module.exports = {
 			{
 				test: /\.html$/,
 				loader: "html-loader"
+			},
+			{
+				test: /\.jsx?$/,         // Match both .js and .jsx files
+				exclude: /node_modules/, 
+				loader: "babel-loader", 
+				query:
+				{
+					presets:['react']
+				}
 			}
 		]
 	},

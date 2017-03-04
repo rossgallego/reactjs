@@ -1,3 +1,27 @@
+$heading-color: blue;
+
+.jumbotron{    min-height: 630px;
+    background: url(https://d13yacurqjgara.cloudfront.net/users/521316/screenshots/2343586/groups_dribble.png);
+    /*background-repeat: repeat-x;*/
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #F6F6F6
+}
 h1{
+	color: $heading-color;
+    font-size: 63px;
+    padding-top: 314px;
+    padding-bottom: 20px;
+}
+.cube{
+	margin-bottom: 30px;
+	background: #f1f1f1;
 	color: #000;
+	padding: 10px;
+
+}
+.cube-thumb{
+	margin-bottom: 20px;
+	width: 100%;
+	display: block;
 }
