@@ -18,7 +18,6 @@ class Counter extends Component {
 
   }
 
-
   render() {
     // const { value, onIncreaseClick } = this.props
     return (
@@ -26,23 +25,20 @@ class Counter extends Component {
             <span>{this.props.value}</span>
             <div className="clearfix"> </div>  
             <span>{this.props.valuey}</span>
-
             <div className="clearfix"> </div>  
-
             <button onClick={this.props.onIncreaseClick}>Increaseasas</button>
-
             <Add value={this.props.value} addItem={this.props.addItem}/>
-
             <DisplayTop displaytop={this.props.dos} ChangeDos={this.props.ChangeDos}/>
-
             <SongList songlist={this.props.songlist} addTodo={this.props.addTodo} deleteSong={this.props.deleteSong}/>
-
-
       </div>
     )
   }
 }
 
+// prop validations
+Counter.propTypes = {
+  value: PropTypes.number
+};
 
 // Map Redux state to component props
 function mapStateToProps(state) {
@@ -59,7 +55,6 @@ function mapDispatchToProps(dispatch) {
   return {
     // onIncreaseClick: () => dispatch(increaseAction)
     onIncreaseClick: function() { dispatch(increaseAction) },
-
     addItem: function(inputt) { return dispatch(increaseAction2(inputt)) },
 
     ChangeDos: function(){ dispatch(dosAction) },
