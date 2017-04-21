@@ -6,7 +6,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	// entry: "./src/js/app.js",
-	entry: "./src/js/jsx/index.jsx",
+	// entry: "./src/js/jsx/index.jsx",
+
+	entry: "./src/js/app.jsx",
+	// entry: "./src/js/components/todo3redux/main.jsx",
+
 	output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
@@ -53,7 +57,7 @@ module.exports = {
 				loader: "babel-loader", 
 				query:
 				{
-					presets:['react']
+					presets:['es2015','react']
 				}
 			}
 		]
